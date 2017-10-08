@@ -72,8 +72,10 @@ if __name__ == '__main__':
             os.environ.get('CONVERSATION_PASSWORD'),
             os.environ.get('CONVERSATION_WORKSPACE_ID'),
             os.environ.get('FOURSQUARE_CLIENT_ID'),
-            os.environ.get('FOURSQUARE_CLIENT_SECRET')
+            os.environ.get('FOURSQUARE_CLIENT_SECRET'),
+            os.environ.get('PROFILE_ANALYSIS')
         )
+        # healthBot.init()
         healthBot.init()
         # State WebSocket Controller
         web_socket_bot_controller = WebSocketBotController(healthBot)

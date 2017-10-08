@@ -17,7 +17,7 @@ from pandas.io.json import json_normalize
 
 class HealthBot():
 
-    def __init__(self, user_store, dialog_store, conversation_username, conversation_password, conversation_workspace_id, foursquare_client_id, foursquare_client_secret, profileAnalysis):
+    def __init__(self, user_store, dialog_store, conversation_username, conversation_password, conversation_workspace_id, foursquare_client_id, foursquare_client_secret, profile_analysis):
         """
         Creates a new instance of HealthBot.
         Parameters
@@ -39,7 +39,8 @@ class HealthBot():
         )
         self.conversation_workspace_id = conversation_workspace_id
 
-        self.profileAnalysis = "introvert"
+        # self.profileAnalysis = "introvert"
+        self.profileAnalysis = profile_analysis
 
         if foursquare_client_id is not None and foursquare_client_secret is not None:
             self.foursquare_client_id = foursquare_client_id
